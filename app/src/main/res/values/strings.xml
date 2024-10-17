@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ecommerce</string>
+    <string name="introTittle">
+        <font color="#5b4cbd">Ecommerce</font>\n
+        materia Nativas</string>
+    <string name="introSubtitles">La mejor App de prueba</string>
+    <string name="login_register">¿Ya tienes una cuenta ?<font color="#5b4cbd">Inicia sesión o registrate</font> </string>
+</resources>
