@@ -4,6 +4,7 @@
     <uses-sdk tools:overrideLibrary="com.google.firebase.auth" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecommerce"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".activity.paypalActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.Login"
             android:exported="true">
@@ -36,10 +41,10 @@
             android:exported="false" />
         <activity
             android:name=".activity.IntroActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
-            android:exported="true" />
+            android:exported="false" />
     </application>
 
 </manifest>

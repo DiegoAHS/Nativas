@@ -1,16 +1,9 @@
 package com.example.ecommerce.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
-import com.example.ecommerce.R;
 import com.example.ecommerce.adapters.CardAdapter;
 import com.example.ecommerce.databinding.ActivityCartBinding;
 import com.example.ecommerce.helper.ManagmentCart;
@@ -31,7 +24,12 @@ public class CartActivity extends BaseActivity {
         calculatorCart();
         setVariable();
         initCartList();
+        initBtn();
 
+    }
+
+    private void initBtn() {
+        binding.checkoutBtn.setOnClickListener(v->startActivity(new Intent(CartActivity.this,paypalActivity.class)));
     }
 
     private void initCartList() {

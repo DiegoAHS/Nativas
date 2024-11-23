@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".activity.paypalActivity">
+
+    <!-- Título o mensaje de bienvenida (opcional) -->
+    <TextView
+        android:id="@+id/payment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Realiza tu pago"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <!-- Contenedor del botón de PayPal centrado -->
+    <com.paypal.checkout.paymentbutton.PaymentButtonContainer
+        android:id="@+id/payment_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        app:paypal_button_color="blue"
+        app:paypal_button_enabled="true"
+        app:paypal_button_label="pay"
+        app:paypal_button_shape="rectangle"
+        app:paypal_button_size="large"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Información adicional debajo del botón (opcional) -->
+    <TextView
+        android:id="@+id/payment_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tu pago será procesado de forma segura"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/payment_button_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
